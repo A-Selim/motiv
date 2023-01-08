@@ -1,0 +1,59 @@
+.sidebar {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.9em 1.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.company-logo {
+  width: 150px;
+  margin-bottom: 40px;
+}
+
+.pages-links-container,
+.settings-container {
+  padding-right: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page-link {
+  margin-bottom: 1.3em;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-link:hover {
+  background-color: #f3f5f8;
+}
+
+.page-link-icon {
+  font-size: 1.4rem;
+  color: #5f6165;
+}
+
+.page-link-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #5f6165;
+}
+
+.settings-container {
+  margin-top: auto;
+}
+
+.settings-container > .page-link {
+  margin-bottom: 40px;
+}
+
+.page-link:last-child {
+  margin-bottom: 0;
+}
