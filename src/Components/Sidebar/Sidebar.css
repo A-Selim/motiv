@@ -13,6 +13,10 @@
   margin-bottom: 40px;
 }
 
+.company-logo > img {
+  object-fit: contain;
+}
+
 .pages-links-container,
 .settings-container {
   padding-right: 1.5em;

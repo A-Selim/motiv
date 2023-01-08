@@ -37,6 +37,10 @@
   margin: 1.25em auto;
 }
 
+.car-image > img {
+  object-fit: contain;
+}
+
 .card-footer {
   display: flex;
   align-items: center;
