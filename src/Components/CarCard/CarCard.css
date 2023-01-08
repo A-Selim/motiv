@@ -1,0 +1,67 @@
+.car-card {
+  padding: 1.5em;
+  background-color: #ffffff;
+  border-radius: 16px;
+  color: #72767c;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.model-name,
+.price {
+  color: #242731;
+}
+
+.model-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.heart-icon {
+  font-size: 1.5rem;
+  color: #a4a5a6;
+  cursor: pointer;
+}
+
+.body-style {
+  font-weight: 400;
+}
+
+.car-image {
+  width: 85%;
+  aspect-ratio: 2/1;
+  margin: 1.25em auto;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.card-footer .icon {
+  font-size: 1.25rem;
+  margin-right: 6px;
+  color: #a162f7;
+}
+
+.passengers,
+.transmission {
+  display: flex;
+  align-items: center;
+}
+
+.passengers {
+  margin-right: 1.25em;
+}
+
+.price {
+  margin-left: auto;
+}
+
+.price > span {
+  color: #72767c;
+}

@@ -5,12 +5,12 @@ import "./Sidebar.css";
 export default function SideBar() {
   const sidebarPages = [
     {
-      link: "dashboard",
+      link: "",
       iconName: "dashboard",
       text: "Dashboard",
     },
     {
-      link: "assets",
+      link: "#",
       iconName: "pie-chart",
       text: "Assets",
     },
@@ -20,27 +20,27 @@ export default function SideBar() {
       text: "Booking",
     },
     {
-      link: "sell-cars",
+      link: "#",
       iconName: "shopping-bag",
       text: "Sell Cars",
     },
     {
-      link: "buy-cars",
+      link: "#",
       iconName: "shopping-cart",
       text: "Buy Cars",
     },
     {
-      link: "services",
+      link: "#",
       iconName: "sword",
       text: "Services",
     },
     {
-      link: "calendar",
+      link: "#",
       iconName: "calendar",
       text: "Calendar",
     },
     {
-      link: "messages",
+      link: "#",
       iconName: "message-2",
       text: "Messages",
     },
@@ -48,12 +48,12 @@ export default function SideBar() {
 
   const sidebarUserTools = [
     {
-      link: "settings",
+      link: "#",
       iconName: "settings-2",
       text: "Settings",
     },
     {
-      link: "",
+      link: "#",
       iconName: "logout-box",
       text: "Log out",
     },
@@ -73,7 +73,7 @@ export default function SideBar() {
   return (
     <div className="sidebar">
       <div className="company-logo">
-        <img src="assets/company-logo.png" alt="" />
+        <img src="assets/company-logo.png" alt="Motiv logo" />
       </div>
 
       <div className="pages-links-container">{createSidebar(sidebarPages)}</div>

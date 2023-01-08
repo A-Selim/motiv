@@ -3,7 +3,10 @@
   font-family: "DM Sans", sans-serif;
 }
 
-body {
+body,
+h2,
+h3,
+p {
   margin: 0;
 }
 
@@ -30,4 +33,6 @@ img {
 
 .main {
   grid-area: main;
+  padding: 2em;
+  background-color: #f5f5f5;
 }
