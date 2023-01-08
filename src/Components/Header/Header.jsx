@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import profileImg from "../../assets/profile-img.png";
 
 export default function Header() {
   return (
@@ -17,7 +16,7 @@ export default function Header() {
       </i>
 
       <div className="avatar">
-        <img src={profileImg} alt="Profile image" />
+        <img src="assets/profile-img.png" alt="Profile image" />
       </div>
     </div>
   );

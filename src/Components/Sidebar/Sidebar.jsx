@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import companyLogo from "../../assets/company-logo.png";
 
 export default function SideBar() {
   const sidebarPages = [
@@ -74,7 +73,7 @@ export default function SideBar() {
   return (
     <div className="sidebar">
       <div className="company-logo">
-        <img src={companyLogo} alt="" />
+        <img src="assets/company-logo.png" alt="" />
       </div>
 
       <div className="pages-links-container">{createSidebar(sidebarPages)}</div>
