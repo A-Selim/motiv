@@ -1,0 +1,55 @@
+.car-widget {
+  padding: 1em;
+  border-radius: 14px;
+}
+
+.car-widget:nth-child(1) {
+  background-color: #e1dfa4;
+}
+
+.car-widget:nth-child(2) {
+  background-color: #e3ecf1;
+}
+
+.car-widget:nth-child(3) {
+  background-color: #f4e3e5;
+}
+
+.widget-top {
+  display: flex;
+  align-items: center;
+}
+
+.widget-top > .icon {
+  font-size: 1.4rem;
+  color: #72767c;
+  margin-right: 0.5em;
+}
+
+.recommend-percent {
+  font-weight: 700;
+}
+
+.widget-image {
+  margin: 0.75em auto;
+}
+
+.widget-model-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.widget-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #72767c;
+}
+
+.widget-footer-leftside {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

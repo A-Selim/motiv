@@ -29,7 +29,7 @@ export default function CarCard(props) {
         </p>
 
         <p className="price">
-          {`$${rentPerDay}`}
+          ${rentPerDay}
           <span>/d</span>
         </p>
       </div>
