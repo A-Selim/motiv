@@ -1,5 +1,59 @@
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 325px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 1.3em;
+}
+
+.main-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #242731;
+}
+
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25em;
+}
+
+.select-box {
+  font-size: 1rem;
+  color: #5f6165;
+  margin: 1em 1em 1em 0;
+  padding: 0.35em 3em 0.35em 1.25em;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  /* Drop down style */
+  appearance: none;
+  background-image: url(assets/arrow-down.png);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 85% center;
+}
+
+.tool-btn {
+  font-size: 1.5rem;
+  padding: 0.5em;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.tool-btn > i {
+  display: block;
+}
+
+.grid-btn {
+  color: #777e91;
+  background-color: #ffffff;
+}
+
+.settings-btn {
+  color: #ffffff;
+  background-color: #a162f7;
+  margin-left: 0.7em;
 }

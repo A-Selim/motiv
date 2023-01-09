@@ -21,6 +21,31 @@ export default function Booking() {
 
   return (
     <>
+      <h2 className="main-title">Booking</h2>
+
+      <div className="main-top">
+        <div className="selection-container">
+          <select name="condition" id="condition" className="select-box">
+            <option value="new">New</option>
+            <option value="old">Old</option>
+          </select>
+          <select name="model" id="model" className="select-box">
+            <option value="toyota">Toyota</option>
+            <option value="bmw">BMW</option>
+            <option value="mazda">Mazda</option>
+          </select>
+        </div>
+
+        <div className="tools-container">
+          <button className="tool-btn grid-btn">
+            <i className="ri-layout-grid-fill"></i>
+          </button>
+          <button className="tool-btn settings-btn">
+            <i className="ri-equalizer-line"></i>
+          </button>
+        </div>
+      </div>
+
       <div className="cards-container">{cardsElements}</div>
     </>
   );
