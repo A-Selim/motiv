@@ -1,0 +1,17 @@
+.gauge-chart {
+  width: 232px;
+  height: 266px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.chart-icon {
+  font-size: 1.3rem;
+  padding: 0.4em;
+  border-radius: 50%;
+}

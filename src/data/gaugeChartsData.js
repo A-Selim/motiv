@@ -1,0 +1,38 @@
+export default [
+  {
+    name: "Energy",
+    value: 45,
+    maxValue: 100,
+    valueType: "percent",
+    icon: "ri-flashlight-fill",
+    color: "#70CF97",
+    iconBackground: "rgba(112, 207, 151, 0.1)",
+  },
+  {
+    name: "Range",
+    value: 157000,
+    maxValue: 300000,
+    valueType: "number",
+    icon: "ri-arrow-up-down-fill",
+    color: "#FF7E86",
+    iconBackground: "rgba(255, 126, 134, 0.1)",
+  },
+  {
+    name: "Break fluid",
+    value: 9,
+    maxValue: 100,
+    valueType: "percent",
+    icon: "ri-drop-fill",
+    color: "#A162F7",
+    iconBackground: "rgba(161, 98, 247, 0.1)",
+  },
+  {
+    name: "Tire wear",
+    value: 25,
+    maxValue: 100,
+    valueType: "percent",
+    icon: "ri-focus-2-fill",
+    color: "#F6CC0D",
+    iconBackground: "rgba(246, 204, 13, 0.1)",
+  },
+];

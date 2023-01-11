@@ -1,9 +1,26 @@
 import React from "react";
+import GaugeChart from "../../Components/Charts/GaugeChart";
+import gaugeChartsData from "../../data/gaugeChartsData";
 import CarWidget from "../../Components/CarWidget/CarWidget";
 import carsDataWidget from "../../data/carsDataWidget";
 import "./Dashboard.css";
 
 export default function Dashboard() {
+  const gaugeChartElements = gaugeChartsData.map((part, index) => {
+    return (
+      <GaugeChart
+        key={index}
+        name={part.name}
+        icon={part.icon}
+        value={part.value}
+        maxValue={part.maxValue}
+        valueType={part.valueType}
+        color={part.color}
+        iconBackground={part.iconBackground}
+      />
+    );
+  });
+
   const widgetElements = carsDataWidget.map((car) => {
     return (
       <CarWidget
@@ -19,6 +36,7 @@ export default function Dashboard() {
 
   return (
     <>
+      <div className="gauge-charts-container">{gaugeChartElements}</div>
       <div className="widgets-container">{widgetElements}</div>
     </>
   );

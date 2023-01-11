@@ -1,3 +1,9 @@
+.gauge-charts-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
 .widgets-container {
   display: flex;
   gap: 30px;
