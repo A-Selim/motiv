@@ -1,12 +1,19 @@
-import React from "react";
-import { VictoryPie, VictoryLabel } from "victory";
+import React, { useState, useEffect } from "react";
+import { VictoryPie, VictoryLabel, VictoryAnimation } from "victory";
 import "./GaugeChart.css";
 
 export default function GaugeChart(props) {
-  const data = {
-    value: props.value,
-    data: getData(props.value),
-  };
+  const [data, setData] = useState({
+    value: 0,
+    data: getData(0),
+  });
+
+  useEffect(() => {
+    setData({
+      value: props.value,
+      data: getData(props.value),
+    });
+  }, []);
 
   function getData(value) {
     return [
@@ -43,15 +50,22 @@ export default function GaugeChart(props) {
             },
           }}
         />
-
-        <VictoryLabel
-          textAnchor="middle"
-          verticalAnchor="middle"
-          x={100}
-          y={100}
-          text={props.valueType === "percent" ? `${Math.round(data.value)}%` : `${Math.round(data.value / 1000)}K`}
-          style={{ fontSize: 25 }}
-        />
+        <VictoryAnimation duration={2000} data={data}>
+          {(data) => {
+            return (
+              <VictoryLabel
+                textAnchor="middle"
+                verticalAnchor="middle"
+                x={100}
+                y={100}
+                text={
+                  props.valueType === "percent" ? `${Math.round(data.value)}%` : `${Math.round(data.value / 1000)}K`
+                }
+                style={{ fontSize: 25 }}
+              />
+            );
+          }}
+        </VictoryAnimation>
       </svg>
     </div>
   );
