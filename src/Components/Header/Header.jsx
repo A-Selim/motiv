@@ -8,7 +8,7 @@ export default function Header() {
         <label htmlFor="search">
           <i className="ri-search-line search-icon"></i>
         </label>
-        <input type="text" id="search" placeholder="Search or type" />
+        <input type="text" id="search" placeholder="Search or type" autoFocus/>
       </div>
 
       <i className="ri-notification-4-line notification-icon">
