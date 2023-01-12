@@ -1,17 +1,17 @@
 import React from "react";
-import { VictoryChart, VictoryTheme, VictoryBar, VictoryAxis } from "victory";
+import { VictoryChart, VictoryBar, VictoryTooltip, VictoryAxis } from "victory";
 import "./BarChart.css";
 
 export default function BarChart() {
   const sampleData = [
-    { x: 1, y: 133 },
-    { x: 2, y: 120 },
-    { x: 3, y: 157 },
-    { x: 4, y: 110 },
-    { x: 5, y: 130 },
-    { x: 6, y: 88 },
-    { x: 7, y: 100 },
-    { x: 8, y: 120 },
+    { x: "1PM", y: 133 },
+    { x: "2PM", y: 120 },
+    { x: "3PM", y: 157 },
+    { x: "2PM", y: 110 },
+    { x: "4PM", y: 130 },
+    { x: "5PM", y: 88 },
+    { x: "6PM", y: 100 },
+    { x: "7PM", y: 120 },
   ];
 
   return (
@@ -30,12 +30,53 @@ export default function BarChart() {
       <VictoryChart height={250}>
         <VictoryBar
           barRatio={0.8}
-          style={{ data: { fill: "#2884FF" } }}
+          style={{ data: { fill: "#F4F5F9" } }}
           alignment="middle"
           categories={{
             x: ["1PM", "2PM", "3PM", "4PM", "5PM", "5PM", "6PM", "7PM"],
           }}
           data={sampleData}
+          events={[
+            {
+              eventHandlers: {
+                onMouseOver: () => {
+                  return [
+                    {
+                      target: "data",
+                      mutation: (props) => {
+                        return props.style.fill === "#2884FF" ? null : { style: { fill: "#2884FF" } };
+                      },
+                    },
+                    {
+                      target: "labels",
+                      mutation: () => ({
+                        active: true,
+                      }),
+                    },
+                  ];
+                },
+
+                onMouseOut: () => {
+                  return [
+                    {
+                      target: "data",
+                      mutation: (props) => {
+                        return props.style.fill === "#F4F5F9";
+                      },
+                    },
+                    {
+                      target: "labels",
+                      mutation: () => ({
+                        active: false,
+                      }),
+                    },
+                  ];
+                },
+              },
+            },
+          ]}
+          labels={({ datum }) => `${datum.x} ${datum.y}K`}
+          labelComponent={<VictoryTooltip dy={0} centerOffset={{ x: 25 }} />}
         />
         <VictoryAxis
           crossAxis={false}
