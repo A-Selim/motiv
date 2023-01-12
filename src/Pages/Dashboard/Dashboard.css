@@ -1,14 +1,10 @@
 .gauge-charts-container,
-.statistics-charts-container {
+.statistics-charts-container,
+.widgets-container {
   display: flex;
   justify-content: space-between;
 }
 
 .statistics-charts-container {
   margin: 1.5em 0 2em;
-}
-
-.widgets-container {
-  display: flex;
-  gap: 30px;
 }
