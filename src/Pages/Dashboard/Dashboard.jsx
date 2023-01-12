@@ -1,9 +1,12 @@
 import React from "react";
-import GaugeChart from "../../Components/Charts/GaugeChart";
+import GaugeChart from "../../Components/Charts/GaugeChart/GaugeChart";
 import gaugeChartsData from "../../data/gaugeChartsData";
+import BarChart from "../../Components/Charts/BarChart/BarChart";
+import LineChart from "../../Components/Charts/LineChart/LineChart";
 import CarWidget from "../../Components/CarWidget/CarWidget";
 import carsDataWidget from "../../data/carsDataWidget";
 import "./Dashboard.css";
+import { Bar } from "victory";
 
 export default function Dashboard() {
   const gaugeChartElements = gaugeChartsData.map((part, index) => {
@@ -37,6 +40,10 @@ export default function Dashboard() {
   return (
     <>
       <div className="gauge-charts-container">{gaugeChartElements}</div>
+      <div className="statistics-charts-container">
+        <BarChart />
+        <LineChart />
+      </div>
       <div className="widgets-container">{widgetElements}</div>
     </>
   );

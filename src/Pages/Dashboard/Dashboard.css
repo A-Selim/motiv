@@ -1,7 +1,11 @@
-.gauge-charts-container {
+.gauge-charts-container,
+.statistics-charts-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5em;
+}
+
+.statistics-charts-container {
+  margin: 1.5em 0 2em;
 }
 
 .widgets-container {
