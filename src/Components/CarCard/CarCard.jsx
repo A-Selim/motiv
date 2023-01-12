@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CarCard.css";
 
 export default function CarCard(props) {
   const { modelName, bodyStyle, image, passengers, transmission, rentPerDay, isFavorite } = props;
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  function mouseEnter() {
+    setIsHovered(true);
+  }
+
+  function mouseLeave() {
+    setIsHovered(false);
+  }
+
   return (
     <div className="car-card">
       <div className="card-top">
         <h3 className="model-name">{modelName}</h3>
-        <i className={`heart-icon ri-heart-${isFavorite ? "fill" : "line"}`}></i>
+        <i
+          className={`heart-icon ri-heart-${isFavorite || isHovered ? "fill" : "line"}`}
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
+        ></i>
       </div>
 
       <p className="body-style">{bodyStyle}</p>

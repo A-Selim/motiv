@@ -27,6 +27,10 @@
   cursor: pointer;
 }
 
+.heart-icon.ri-heart-fill {
+  color: #ff0000;
+}
+
 .body-style {
   font-weight: 400;
 }
