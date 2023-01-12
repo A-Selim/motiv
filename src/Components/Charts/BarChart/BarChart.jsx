@@ -7,7 +7,6 @@ export default function BarChart() {
     { x: "1PM", y: 133 },
     { x: "2PM", y: 120 },
     { x: "3PM", y: 157 },
-    { x: "2PM", y: 110 },
     { x: "4PM", y: 130 },
     { x: "5PM", y: 88 },
     { x: "6PM", y: 100 },
@@ -33,7 +32,7 @@ export default function BarChart() {
           style={{ data: { fill: "#F4F5F9" } }}
           alignment="middle"
           categories={{
-            x: ["1PM", "2PM", "3PM", "4PM", "5PM", "5PM", "6PM", "7PM"],
+            x: ["1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM"],
           }}
           data={sampleData}
           events={[
@@ -75,8 +74,17 @@ export default function BarChart() {
               },
             },
           ]}
-          labels={({ datum }) => `${datum.x} ${datum.y}K`}
-          labelComponent={<VictoryTooltip dy={0} centerOffset={{ x: 25 }} />}
+          labels={({ datum }) => datum.x + "\n" + datum.y + "K"}
+          labelComponent={
+            <VictoryTooltip
+              dy={0}
+              pointerLength={0}
+              centerOffset={{ x: 50, y: 60 }}
+              flyoutStyle={{ stroke: "transparent", fill: "#282B32" }}
+              flyoutPadding={{ top: 5, bottom: 5, left: 16, right: 16 }}
+              style={{ fill: "#FFFFFF", fontSize: 13, fontWeight: 700 }}
+            />
+          }
         />
         <VictoryAxis
           crossAxis={false}
