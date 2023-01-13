@@ -6,7 +6,6 @@ import LineChart from "../../Components/Charts/LineChart/LineChart";
 import CarWidget from "../../Components/CarWidget/CarWidget";
 import carsDataWidget from "../../data/carsDataWidget";
 import "./Dashboard.css";
-import { Bar } from "victory";
 
 export default function Dashboard() {
   const gaugeChartElements = gaugeChartsData.map((part, index) => {

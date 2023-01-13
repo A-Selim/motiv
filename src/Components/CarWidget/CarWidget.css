@@ -1,7 +1,10 @@
 .car-widget {
   width: 32%;
-  padding: 1.7em 1em;
+  padding: 1em 1.7em;
   border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .car-widget:nth-child(1) {
