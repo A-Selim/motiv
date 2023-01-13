@@ -30,6 +30,7 @@ export default function Booking() {
             <option value="old">Old</option>
           </select>
           <select name="model" id="model" className="select-box">
+            <option value="all">All</option>
             <option value="toyota">Toyota</option>
             <option value="bmw">BMW</option>
             <option value="mazda">Mazda</option>

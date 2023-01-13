@@ -79,7 +79,7 @@ export default function BarChart() {
             <VictoryTooltip
               dy={0}
               pointerLength={0}
-              centerOffset={{ x: 50, y: 60 }}
+              centerOffset={{ x: 35, y: 60 }}
               flyoutStyle={{ stroke: "transparent", fill: "#282B32" }}
               flyoutPadding={{ top: 5, bottom: 5, left: 16, right: 16 }}
               style={{ fill: "#FFFFFF", fontSize: 13, fontWeight: 700 }}
