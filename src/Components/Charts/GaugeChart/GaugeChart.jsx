@@ -26,7 +26,10 @@ export default function GaugeChart(props) {
     <div className="gauge-chart">
       <i
         className={`${props.icon} chart-icon`}
-        style={{ color: props.color, backgroundColor: props.iconBackground }}
+        style={{
+          color: props.color,
+          backgroundColor: props.iconBackground,
+        }}
       ></i>
       <h3 className="gauge-chart-title">{props.name}</h3>
 
@@ -50,7 +53,7 @@ export default function GaugeChart(props) {
             },
           }}
         />
-        <VictoryAnimation duration={2000} data={data}>
+        <VictoryAnimation duration={400} data={data} delay={600}>
           {(data) => {
             return (
               <VictoryLabel
@@ -61,7 +64,7 @@ export default function GaugeChart(props) {
                 text={
                   props.valueType === "percent" ? `${Math.round(data.value)}%` : `${Math.round(data.value / 1000)}K`
                 }
-                style={{ fontSize: 25 }}
+                style={{ fontSize: 24, fontWeight: 700, fill: "#242731" }}
               />
             );
           }}

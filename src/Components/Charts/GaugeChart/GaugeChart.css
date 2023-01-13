@@ -14,3 +14,31 @@
   padding: 0.4em;
   border-radius: 50%;
 }
+
+.gauge-chart-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #242731;
+}
+
+.gauge-chart:hover {
+  background-color: #a162f7;
+}
+
+.gauge-chart:hover .chart-icon {
+  color: #ffffff !important;
+  background-color: #b37efc !important;
+}
+
+.gauge-chart:hover .gauge-chart-title {
+  color: #ffffff;
+}
+
+.gauge-chart:hover svg g path:first-child,
+.gauge-chart:hover svg tspan {
+  fill: white !important;
+}
+
+.gauge-chart:hover svg g path:last-child {
+  fill: #b37efc !important;
+}
