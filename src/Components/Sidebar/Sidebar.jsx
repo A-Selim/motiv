@@ -62,7 +62,7 @@ export default function SideBar() {
   function createSidebar(array) {
     return array.map((element, index) => {
       return (
-        <Link key={index} to={`/${element.link}`} className="page-link">
+        <Link key={index} to={`/motiv/${element.link}`} className="page-link">
           <i className={`ri-${element.iconName}-line page-link-icon`}></i>
           <span className="page-link-text">{element.text}</span>
         </Link>

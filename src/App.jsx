@@ -12,8 +12,8 @@ export default function App() {
       <SideBar />
       <main className="main">
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/booking" element={<Booking />} />
+          <Route path="/motiv/" element={<Dashboard />} />
+          <Route path="/motiv/booking" element={<Booking />} />
         </Routes>
       </main>
     </div>
